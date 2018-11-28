@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--desde * * * ** * ** * ** *  aqui-->
+    <meta http-equiv="Content-Type" content="text/html; charset=euc-jp">
+    <meta name="viewport" content="width=device-width, initial-scale=1", charset=utf-8>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Fantasy World Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+  Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,0); } </script>
+    <!-- //for-mobile-apps -->
+    <link th:href="@{css/bootstrap.css}" rel="stylesheet" type="text/css" media="all" />
+    <link th:href="@{css/style.css}" rel="stylesheet" type="text/css" media="all" />
+    <!-- gallery -->
+    <link rel="stylesheet" th:href="@{css/lightGallery.css}" type="text/css" media="all" />
+    <!-- //gallery -->
+    <!-- font-awesome icons -->
+
+
+    <!-- //font-awesome icons -->
+    <link href="//fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Jura:300,400,500,600" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+<!-- header -->
+<div class="header">
+    <div class="w3layouts_header_left">
+        <div class="top-nav-text">
+            <p>Llamanos : <span class="call">+57 320 943 4717</span></p>
+            <p>Escribenos : <span class="mail"><a th:href="@{mailto:admin@pactodehonorpg.com}">admin@pactodehonorpg.com</a></span></p>
+        </div>
+    </div>
+
+    <div class="clearfix"> </div>
+</div>
+
+<br><br><br><br>
+<h3 class="w3l_head w3l_head1">Login</h3>
+<p class="w3ls_head_para w3ls_head_para1">Pacto de honor</p>
+<br><br><br><br>
+<div class="container">
+    <div class="w3_mail_grids">
+
+
+
+        <form th:action="@{/login}" method="POST" >
+        <input type="text" id="email" name="email" th:placeholder="Email"
+               class="form-control"/> <br/>
+        <input type="password" th:placeholder="Contrasena"
+               id="password" name="password" class="form-control"/> <br/>
+
+
+        <input class = "container" name="submit" type="submit" value="Entrar">
+        </form>
+
+        <div align="center" th:if="${param.error}">
+            <p style="font-size: 20; color: #FF1C19;">Email or Contraseña invalida</p>
+        </div>
+    <br>
+        <span >Soy nuevo, <a th:href="@{/registration}">registrarme!</a></span>
+
+
+
+</div>
+</div>
+
+
+</div>
+</body>
+</html>

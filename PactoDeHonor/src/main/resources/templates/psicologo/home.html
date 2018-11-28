@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--desde * * * ** * ** * ** *  aqui-->
+    <meta http-equiv="Content-Type" content="text/html; charset=euc-jp">
+    <meta name="viewport" content="width=device-width, initial-scale=1", charset=utf-8>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Fantasy World Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+  Smartphone Compatible web template, free web designs for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,0); } </script>
+    <!-- //for-mobile-apps -->
+    <link th:href="@{css/bootstrap.css}" rel="stylesheet" type="text/css" media="all" />
+    <link th:href="@{css/style.css}" rel="stylesheet" type="text/css" media="all" />
+    <!-- gallery -->
+    <link rel="stylesheet" th:href="@{css/lightGallery.css}" type="text/css" media="all" />
+    <link href="//fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Jura:300,400,500,600" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+<!-- header -->
+<h1 align="center">Resultados pruebas</h1>
+<br>
+<br>
+
+<!-- CSS Code: Place this code in the document's head (between the 'head' tags) -->
+<style>
+table {
+  width: 100%;
+  background-color: #ffffff;
+  border-collapse: collapse;
+  border-width: 2px;
+  border-color: #cf8430;
+  border-style: solid;
+  color: #000000;
+}
+
+ td, th {
+  border-width: 2px;
+  border-color: #cf8430;
+  border-style: solid;
+  padding: 3px;
+}
+
+thead {
+  background-color: #fe8a34;
+}
+</style>
+<table id = "demo" border="1">
+            <thead >
+            <tr>
+                <th>nombre mision</th>
+                <th>Descripcion mision</th>
+                <th>Mecanica</th>
+                <th>Pregunta</th>
+                <th>Descripcion pregunta</th>
+                <th>respuesta</th>
+                <th>Nombre </th>
+                <th>Apellido </th>
+                <th>Sexo </th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr data-th-each="fila : ${tabla}">
+                <td data-th-text="${fila.nm}"></td>
+                <td data-th-text="${fila.dm}"></td>
+                <td data-th-text="${fila.mec}"></td>
+                <td data-th-text="${fila.pre}"></td>
+                <td data-th-text="${fila.des}"></td>
+                <td data-th-text="${fila.resp}"}></td>
+                <td data-th-text="${fila.na}"></td>
+                <td data-th-text="${fila.last}"></td>
+                <td data-th-text="${fila.sex}"></td>
+
+            </tr>
+            </tbody>
+        </table>
+<br>
+<br>
+<br>
+<form th:action="@{/landing}" method="get">
+    <button class="btn btn-md btn-danger btn-block"
+            type="Submit">Regresar al menu
+    </button>
+</form>
+
+<script th:src="@{\tablefilter\tablefilter.js}"></script>
+<script >
+	var filtersConfig = {
+		base_path: 'tablefilter/',
+		alternate_rows: false,
+		rows_counter: false,
+				   	//btn_css_class: "btn1",
+				   	btn_reset: false,
+				   	btn: false,
+				   	loader: false,
+				   	status_bar: false,
+				   	mark_active_columns: true,
+				   	highlight_keywords: true,
+				   	col_0: "select",
+				   	col_1: "select",
+				   	col_2: "none",
+				   	col_3: "none",
+				   	col_4: "none",
+				   	col_5: "none",
+				   	col_6: "input",
+				   	col_7: "input",
+				   	col_8: "none",
+
+				   	col_types: [
+				   	'number', 'string', 'number',
+				   	'date', 'number','string'
+				   	]
+				   };
+
+				   var tf = new TableFilter('demo', filtersConfig);
+				   tf.init();
+				</script>
+</body>
+</html>
