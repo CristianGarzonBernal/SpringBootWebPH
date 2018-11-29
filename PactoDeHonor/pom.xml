@@ -8,8 +8,8 @@
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>login</name>
-    <description>Demo project for Spring Boot</description>
+    <name>pactoHonor</name>
+    <description>un juego medievil</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
