@@ -115,12 +115,7 @@ function hideURLbar(){ window.scrollTo(0,0); } </script>
                         <div class="projects-grid-caption">
 
                             <h4>Manuales del psicologo</h4>
-                            <form th:action="@{/psicologo/home}" method="get" >
 
-
-                                <button style="background:transparent; border:none; color:white; font-size:28px;"  name="Submit"  type="Submit"
-                                        th:text="aqui"></button>
-                            </form>
 
                         </div>
                     </div>
@@ -131,14 +126,12 @@ function hideURLbar(){ window.scrollTo(0,0); } </script>
                         <img src="images/lapiz.jpg" alt="" />
                         <div class="projects-grid-caption">
                             <h4>Mira los reportes</h4>
-                            <form th:action="@{/admin/home}" method="get" >
+                            <form th:action="@{/psicologo/home}" method="get" >
 
 
-                                <button style="background:transparent; border:none; color:white; font-size:28px;" name="Submit"  type="Submit"
-                                         th:text="aqui"></button>
+                                <button style="background:transparent; border:none; color:white; font-size:28px;"  name="Submit"  type="Submit"
+                                        th:text="aqui"></button>
                             </form>
-
-
 
                         </div>
                     </div>

@@ -65,9 +65,9 @@ function hideURLbar(){ window.scrollTo(0,0); } </script>
 
         <input class = "container" name="submit" type="submit" value="Entrar">
         </form>
-
+        <br>
         <div align="center" th:if="${param.error}">
-            <p style="font-size: 20; color: #FF1C19;">Email or Contrase«Ğa invalida</p>
+            <p style="font-size: 100; color: #FF1C19;">Email or Contrasena invalida</p>
         </div>
     <br>
         <span >Soy nuevo, <a th:href="@{/registration}">registrarme!</a></span>
