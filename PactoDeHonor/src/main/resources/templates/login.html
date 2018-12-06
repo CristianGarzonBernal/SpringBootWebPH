@@ -4,6 +4,8 @@
 
 <head>
     <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -71,10 +73,59 @@ function hideURLbar(){ window.scrollTo(0,0); } </script>
         </div>
     <br>
         <span >Soy nuevo, <a th:href="@{/registration}">registrarme!</a></span>
+        <br>
+        <span >Regresar a la pagina principal <a th:href="@{/index}">Aqui!</a></span>
 
 
 
 </div>
+</div>
+
+<br><br><br><br>
+
+<div class="w3l_footer">
+    <div class="container">
+
+        <div class="w3ls_footer_grids">
+
+            <div class="w3ls_footer_grid">
+                <div class="col-md-4 w3ls_footer_grid_left">
+                    <div class="w3ls_footer_grid_leftl">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <div class="w3ls_footer_grid_leftr">
+                        <h4>Ubicacion</h4>
+                        <p>Calle 57# 3-00 este, Bogota</p>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="col-md-4 w3ls_footer_grid_left">
+                    <div class="w3ls_footer_grid_leftl">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <div class="w3ls_footer_grid_leftr">
+                        <h4>Email</h4>
+                        <a href="mailto:Admin@pactodehonorpg.com">Admin@pactodehonorpg.com</a>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="col-md-4 w3ls_footer_grid_left">
+                    <div class="w3ls_footer_grid_leftl">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    </div>
+                    <div class="w3ls_footer_grid_leftr">
+                        <h4>Llamanos</h4>
+                        <p>(+57) 3209434717</p>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <div class="w3l_footer_pos">
+        <p>2017 Fantasy World. All Rights Reserved | Design by <a href="https://w3layouts.com/">W3layouts</a></p>
+    </div>
 </div>
 
 

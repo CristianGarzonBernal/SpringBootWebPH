@@ -3,6 +3,8 @@
       xmlns:th="http://www.thymeleaf.org">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -27,9 +29,16 @@ function hideURLbar(){ window.scrollTo(0,0); } </script>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
 
 </head>
-
+<img height="46" width="1519" th:src="@{/images/header.png}"/>
 <body>
-<!-- header -->
+<br><br><br>
+<!-- header --><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 <h1 align="center">Resultados pruebas</h1>
 <br>
 <br>
@@ -48,27 +57,30 @@ table {
 
  td, th {
   border-width: 2px;
-  border-color: #cf8430;
+  border-color: #000;
   border-style: solid;
   padding: 3px;
 }
 
+
 thead {
-  background-color: #fe8a34;
+  background-color: #000;
 }
 </style>
 <table id = "demo" border="1">
             <thead >
             <tr>
-                <th>nombre mision</th>
-                <th>Descripcion mision</th>
-                <th>Mecanica</th>
-                <th>Pregunta</th>
-                <th>Descripcion pregunta</th>
-                <th>respuesta</th>
-                <th>Nombre </th>
-                <th>Apellido </th>
-                <th>Sexo </th>
+                <th><font color="#cf8430">nombre mision</font></th>
+                <th><font color="#cf8430">Descripcion mision</font></th>
+                <th><font color="#cf8430">Mecanica</font></th>
+                <th><font color="#cf8430">Pregunta</font></th>
+                <th><font color="#cf8430">Descripcion pregunta</font></th>
+                <th><font color="#cf8430">respuesta</font></th>
+                <th><font color="#cf8430">Nombre</font></th>
+                <th><font color="#cf8430">Apellido</font></th>
+                <th><font color="#cf8430">Sexo</font></th>
+
+
 
             </tr>
             </thead>
@@ -87,15 +99,85 @@ thead {
             </tr>
             </tbody>
         </table>
-<br>
-<br>
-<br>
+<br><br><br><br><br><br><br><br><br>
+
+
+<h1 align="center">Manual de psicólogo </h1><br>
+<div align="center">
+<h4>Controles de juego</h4>
+
+<img th:src="@{/images/controles1.png}"/>
+
+<h4>Iniciar sesión </h4><br>
+<p>Al abrir el juego aparecerá la pantalla de inicio de <br>
+    sesion donde se debe ingresar con el usuario y la clave provisionadas por el equipo de PACTODEHONORPG. </p>
+
+    <br>
+<img th:src="@{/images/iniciarSecion.png}"/>
+<h4>Crear misiones</h4><br>
+<p>Al iniciar sesión aparecerá en el mapa del Politécnico Grancolombiano, <br>
+    Para crear una misión debe oprimir el botón C del teclado. </p>
+
+    <br>
+<img th:src="@{/images/crear3.png}"/>
+    <br>
+<p>Aparecerá el siguiente menú, en el recuadro opciones de misión, debe hacer click sobre nueva.</p>
+
+
+    <br>
+<img th:src="@{/images/crear4.png}"/>
+    <br>
+<h4>Asset</h4><br>
+<p>Para crear las preguntas asociadas a una misión, primero debe escoger a que entidad irán relacionadas las preguntas,
+    <br> es decir quien preguntara, pueden ser objetos y personajes o enemigos:</p>
+<ul>
+    <li>1.	Debe seleccionar el tipo de entidad al que ira asociada la pregunta, sea enemigo objeto o NPC(Personaje). </li>
+    <li>2.	Tras escoger el tipo de entidad, puede escoger entre una amplia lista de selección. </li>
+    <li>3.	Debe escoger en qué lugar del mapa lo colocara y debe crearlo.</li>
+</ul>
+
+    <br>
+<img th:src="@{/images/crear5.png}"/>
+    <br>
+
+<p>A continuación, un ejemplo con NPC.</p>
+
+    <br>
+<img th:src="@{/images/crear6.png}"/>
+    <br>
+<h4> Preguntas</h4><br>
+<p>Tras hacer click sobre crear, parecerá el siguiente menú:</p>
+<ul>
+    <li>1.	Debe crear la pregunta, la descripción de la pregunta y la cantidad de respuestas asociadas a esta pregunta. </li>
+    <li>2.	Debe crear las respuestas una a la vez, seleccionando la recompensa y la imagen en este caso que corresponde a la respuesta. </li>
+    <li>3.	Solo hasta crear todas las respuestas podrá guardar la pregunta.  </li>
+</ul>
+    <br>
+<img th:src="@{/images/pregunta.png}"/>
+    <br>
+<p>Al completar la información requerida se desbloqueará el botón Guardar pregunta. </p>
+    <br>
+
+<img th:src="@{/images/pregunta1.png}"/>
+    <br>
+    Posteriormente se debe crear el npc disparador de la misión.
+</p>
+    <br>
+<img th:src="@{/images/pregunta2.png}"/>
+
+    <br>
+<p>Se escoge un lugar en el mapa y la misión estará creada</p>
+
+    <br>
+<img th:src="@{/images/pregunta3.png}"/>
+</div>
+<br><br><br>
 <form th:action="@{/landing}" method="get">
     <button class="btn btn-md btn-danger btn-block"
             type="Submit">Regresar al menu
     </button>
 </form>
-
+<br><br><br><br>
 <script th:src="@{\tablefilter\tablefilter.js}"></script>
 <script >
 	var filtersConfig = {
